@@ -26,8 +26,8 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
     );
 }
 
-app.use("/api/v2/users", userRoute);
-app.use("/api/v2/posts", postRoute);
+app.use("/api/v1/users", userRoute);
+app.use("/api/v1/posts", postRoute);
 
 
 // error middileware
