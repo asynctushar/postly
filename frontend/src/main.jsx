@@ -1,14 +1,21 @@
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
 import { AuthProvider } from './context/auth/AuthProvider';
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import theme from "./theme";
+import { SnackbarProvider } from './context/snackbar/SnackbarProvider';
+
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
-  </StrictMode>,
+
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <SnackbarProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </SnackbarProvider>
+  </ThemeProvider>
 );

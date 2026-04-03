@@ -12,6 +12,8 @@ export const AuthProvider = ({ children }) => {
         const init = async () => {
             try {
                 const { data } = await userService.getMe();
+
+                console.log(data);
                 setUser(data.user);
             } catch (err) {
                 setUser(null);
