@@ -1,8 +1,18 @@
-import React from 'react';
+import { Box, CircularProgress } from "@mui/material";
 
-const Loader = () => {
+const Loader = ({ fullScreen = false }) => {
     return (
-        <div>Loader</div>
+        <Box
+            sx={{
+                height: fullScreen ? "100vh" : "100%",
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+            }}
+        >
+            <CircularProgress />
+        </Box>
     );
 };
 
