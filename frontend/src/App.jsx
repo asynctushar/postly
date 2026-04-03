@@ -1,8 +1,17 @@
-import React from 'react';
+import { Suspense } from "react";
+import { Outlet } from "react-router";
+import ErrorBoundary from "./components/shared/ErrorBoundary";
+import Loader from "./components/shared/Loader";
 
 const App = () => {
     return (
-        <div>App</div>
+        <>
+            <ErrorBoundary>
+                <Suspense fallback={<Loader />}>
+                    <Outlet />
+                </Suspense>
+            </ErrorBoundary>
+        </>
     );
 };
 
