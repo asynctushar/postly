@@ -1,3 +1,5 @@
+const userService = require("../services/user.service");
+
 // Helper to send tokens
 const sendTokens = async (user, res) => {
     const accessToken = user.generateAccessToken();
