@@ -1,6 +1,6 @@
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
 const postService = require("../services/post.service");
-const { uploadImage } = require("../services/cloudinary");
+const { uploadImage } = require("../services/cloud.service");
 
 
 // Create Post

@@ -3,7 +3,7 @@ const ErrorHandler = require("../utils/errorHandler");
 const jwt = require("jsonwebtoken");
 
 const userService = require("../services/user.service");
-const { uploadImage, deleteFile } = require("../services/cloud.service.js");
+const { uploadImage, deleteFile } = require("../services/cloud.service");
 const sendTokens = require("../utils/sendTokens");
 
 
